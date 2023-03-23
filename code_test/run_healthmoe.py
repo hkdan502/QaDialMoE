@@ -7,8 +7,10 @@ def mkdir(path):
 
 def main():
     mkdir(args.output_dir) #default='./outputs_healthver'
+    print(args.train_batch_size)
     args.train_batch_size = args.train_batch_size // args.gradient_accumulation_steps
-    # [?]왜 배치크기를 경사누적횟수로 나눈
+    print(args.train_batch_size)
+    # [?]왜 배치크기를 경사누적횟수로 나눈 정수
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
